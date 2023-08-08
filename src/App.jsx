@@ -22,9 +22,10 @@ function App() {
     const [passwordTwo, setPasswordTwo] = useState('');
 
     function generatePassword() {
-        const newPassword = getPassword();
-        setPasswordOne(newPassword);
-        setPasswordTwo(newPassword);
+      const newPasswordOne = getPassword();
+      const newPasswordTwo = getPassword();
+      setPasswordOne(newPasswordOne);
+      setPasswordTwo(newPasswordTwo);
     }
 
     return (
