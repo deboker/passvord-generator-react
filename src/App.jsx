@@ -28,6 +28,15 @@ function App() {
       setPasswordTwo(newPasswordTwo);
     }
 
+    function copyPasswordToClipboard(password) {
+        const el = document.createElement('textarea');
+        el.value = password;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     return (
         <div>
             <h1>Generate a random Password</h1>
@@ -35,7 +44,9 @@ function App() {
             <button onClick={generatePassword}>Generate Passwords</button>
             <p id="line"></p>
             <p id="password-one">{passwordOne}</p>
+            <button onClick={() => copyPasswordToClipboard(passwordOne)}>Copy</button>
             <p id="password-two">{passwordTwo}</p>
+            <button onClick={() => copyPasswordToClipboard(passwordTwo)}>Copy</button>
         </div>
     );
 }
