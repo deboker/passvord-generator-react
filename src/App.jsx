@@ -41,12 +41,12 @@ function App() {
         <div>
             <h1>Generate a random Password</h1>
             <p id="note-pasword">Never use an insecure password again.</p>
-            <button onClick={generatePassword}>Generate Passwords</button>
+            <button id="generate-button" onClick={generatePassword}>Generate Passwords</button>
             <p id="line"></p>
             <p id="password-one">{passwordOne}</p>
-            <button onClick={() => copyPasswordToClipboard(passwordOne)}>Copy</button>
+            <button id="centered-button-one" onClick={() => copyPasswordToClipboard(passwordOne)}>Copy</button>
             <p id="password-two">{passwordTwo}</p>
-            <button onClick={() => copyPasswordToClipboard(passwordTwo)}>Copy</button>
+            <button id="centered-button-two" onClick={() => copyPasswordToClipboard(passwordTwo)}>Copy</button>
         </div>
     );
 }
